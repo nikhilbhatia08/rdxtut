@@ -1,8 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import useChanger from './useChanger'
 
 function Comp2() {
-    const num = useSelector((state) => state.counter.value)
+    const [num, dispatch] = useChanger()
   return (
     <div>{num}</div>
   )

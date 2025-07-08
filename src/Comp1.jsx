@@ -1,10 +1,9 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import useChanger from './useChanger'
 import { increment, decrement } from './redux/counterSlice';
 
 function Comp1() {
-    const counter = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch();
+    const [counter, dispatch] = useChanger();
   return (
     <div>
         <button className='decrease' onClick={() => dispatch(decrement())}>
